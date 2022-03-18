@@ -8,7 +8,7 @@
 }
 
 #fondo {
-  background: #787979;
+  background: #6e3852;
   font-family: sans-serif;
   margin: 0 auto;
   width:90%;
@@ -17,11 +17,14 @@
 }
 
 #encabezado {
-  background: #b8b6b6;
+  background: rgba(117, 117, 117, 0.507);
   width: 100%;
   padding: 2%;
 }
 
+p {
+  line-height: 1.5;
+}
 
 #tituloprincipal {
   font-size: 200%;
@@ -34,12 +37,12 @@
 
 #botonera {
 	width: 100%;
-	height: 50px;
+	height: 40px;
   padding: 1%;
 }
 
 #fondopie {
-  background: #482158;
+  background: #472435;
   width: 100%;
   height: 80%;
   overflow: hidden;
@@ -50,7 +53,6 @@
   margin: 0 auto;
   padding: 0 0 3% 0;
 }
-
 
 .icon-text-text {
   float: left;
@@ -121,6 +123,36 @@ p {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-.skillset .theme-progress-bar {
-  background: #b67091;
+
+#barranav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0 3% 0;
+}
+
+.icon-nav-text {
+  float: right;
+  width: 100%;
+  padding: 4% 4% 2% 0;
+  font-size: 100%;
+}
+
+.nsocial {
+  list-style-type: none;
+  text-align: right;
+}
+
+.social li {
+  display: inline;
+}
+
+.social i {
+  font-size: 300%;
+  margin: 1%;
+  padding: 5%;
+  color: #D7BDE2;
+}
+
+.social i:hover {
+  color: #FDFEFE;
 }
