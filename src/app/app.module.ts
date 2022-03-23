@@ -13,6 +13,7 @@ import { CompetenciasComponent } from './componentes/competencias/competencias.c
 import { HttpClientModule} from '@angular/common/http';
 import { AcercadeComponent } from './componentes/acercade/acercade.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { IniciosesionComponent } from './componentes/iniciosesion/iniciosesion.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { LoginComponent } from './componentes/login/login.component';
     ProyFreelanceComponent,
     CompetenciasComponent,
     AcercadeComponent,
-    LoginComponent
+    LoginComponent,
+    IniciosesionComponent
   ],
   imports: [
     BrowserModule,
