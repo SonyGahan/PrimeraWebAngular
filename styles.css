@@ -19,7 +19,7 @@
 #encabezado {
   background: rgba(117, 117, 117, 0.507);
   width: 100%;
-  padding: 3%;
+  padding: 2%;
 }
 
 p {
@@ -32,20 +32,7 @@ p {
   font-weight: 400;
   color: #FDFEFE;
   text-align: center;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: -160px;
-  z-index: 2;
-}
-
-.imagen-perfil{
-  border-radius: 50%;
-  width: 180px;
-  position: absolute;
-  margin-top: 90px;
-  z-index: 1;
-  margin-left: 0px;
+  padding: 3%;
 }
 
 #botonera {
