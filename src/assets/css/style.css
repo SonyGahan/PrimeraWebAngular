@@ -1,11 +1,5 @@
-@charset "utf-8"
-/* CSS Document */
 
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
+/* CSS Document */
 
 #fondo {
   background: #6e3852;
@@ -19,12 +13,28 @@
 #encabezado {
   background: rgba(117, 117, 117, 0.507);
   width: 100%;
-  padding: 3%;
+  padding: 2%;
 }
 
 p {
   line-height: 1.5;
 }
+
+.imagen-perfil{
+  border-radius: 50%;
+  width: 20%;
+  position: relative;
+  margin-top: -110px;
+  z-index: 1;
+  margin-left: 10px;
+}
+
+/*
+.img-Carousel{
+  height: 350px;
+}
+
+*/
 
 #tituloprincipal {
   font-size: 200%;
@@ -35,17 +45,8 @@ p {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -160px;
+  margin-top: -80px;
   z-index: 2;
-}
-
-.imagen-perfil{
-  border-radius: 50%;
-  width: 180px;
-  position: absolute;
-  margin-top: 90px;
-  z-index: 1;
-  margin-left: 0px;
 }
 
 #botonera {
@@ -144,9 +145,9 @@ p {
 }
 
 .icon-nav-text {
-  float: center;
+  float: left;
   width: 100%;
-  padding: 2%;
+  padding: 4% 4% 2% 0;
   font-size: 100%;
 }
 
@@ -165,4 +166,25 @@ p {
 
 .nsocial i:hover {
   color: #FDFEFE;
+}
+
+
+.botonicono {
+  list-style-type: none;
+ 
+}
+
+.botonicono li {
+  float: left;
+  width: 100%;
+  padding: 4% 4% 2% 0;
+  font-size: 100%;
+}
+
+.botonicono i {
+  color: #2a0d36;
+}
+
+.botonicono i:hover {
+  color: #8b5c80;
 }
