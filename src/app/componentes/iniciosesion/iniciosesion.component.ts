@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-iniciosesion',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./iniciosesion.component.css']
 })
 export class IniciosesionComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(private formBuilder:FormBuilder) {
+    
+   }
 
   ngOnInit(): void {
   }

@@ -14,6 +14,8 @@ import { HttpClientModule} from '@angular/common/http';
 import { AcercadeComponent } from './componentes/acercade/acercade.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { IniciosesionComponent } from './componentes/iniciosesion/iniciosesion.component';
+import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -28,12 +30,14 @@ import { IniciosesionComponent } from './componentes/iniciosesion/iniciosesion.c
     CompetenciasComponent,
     AcercadeComponent,
     LoginComponent,
-    IniciosesionComponent
+    IniciosesionComponent,
+    PorfolioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
