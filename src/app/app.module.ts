@@ -11,7 +11,6 @@ import { ExpLaboralComponent } from './componentes/exp-laboral/exp-laboral.compo
 import { ProyFreelanceComponent } from './componentes/proy-freelance/proy-freelance.component';
 import { CompetenciasComponent } from './componentes/competencias/competencias.component';
 import { HttpClientModule} from '@angular/common/http';
-import { AcercadeComponent } from './componentes/acercade/acercade.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { IniciosesionComponent } from './componentes/iniciosesion/iniciosesion.component';
 import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
@@ -28,7 +27,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     ExpLaboralComponent,
     ProyFreelanceComponent,
     CompetenciasComponent,
-    AcercadeComponent,
     LoginComponent,
     IniciosesionComponent,
     PorfolioComponent

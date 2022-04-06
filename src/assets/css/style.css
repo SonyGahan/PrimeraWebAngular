@@ -14,6 +14,7 @@
   background: rgba(117, 117, 117, 0.507);
   width: 100%;
   padding: 2%;
+  position: relative;
 }
 
 p {
@@ -24,17 +25,10 @@ p {
   border-radius: 50%;
   width: 20%;
   position: relative;
-  margin-top: -110px;
+  margin-top: -140px;
   z-index: 1;
   margin-left: 10px;
 }
-
-/*
-.img-Carousel{
-  height: 350px;
-}
-
-*/
 
 #tituloprincipal {
   font-size: 200%;
@@ -47,12 +41,6 @@ p {
   margin-right: auto;
   margin-top: -80px;
   z-index: 2;
-}
-
-#botonera {
-	width: 100%;
-	height: 40px;
-  padding: 1%;
 }
 
 #fondopie {
@@ -203,3 +191,21 @@ p {
 .botonagregar i:hover {
   color: #3b393b;
 }
+
+.espacios{
+  padding: 2%;
+}
+
+
+.editaricono {
+  list-style-type: none;
+  color: #fbf8fc;
+  float: left;
+  width: 100%;
+  padding: 4% 4% 2% 0;
+  font-size: 140%;
+  margin-left: 30px;
+}
+
+
+  
