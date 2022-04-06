@@ -188,3 +188,18 @@ p {
 .botonicono i:hover {
   color: #8b5c80;
 }
+
+
+.botonagregar i {
+  font-size: 130%;
+  margin: 2%;
+  padding: 2%;
+}
+
+.botonagregar i {
+  color: #fbf8fc;
+}
+
+.botonagregar i:hover {
+  color: #3b393b;
+}
