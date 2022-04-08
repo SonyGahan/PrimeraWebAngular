@@ -14,7 +14,7 @@
 <div class="container-xxl espacios">
   <div class="container">
     <div class="row row-cols-2 row-cols-lg-2 g-2 g-lg-2">
-      <div class="col mx-auto" style="width: 40%;">
+      <div *ngFor= "let experiencia of experienciaList" class="col mx-auto" style="width: 40%;">
         <div class="p-3 border bg-light">
           <div class="card mx-auto" style="width: 100%;">
             <div class="card-header">
@@ -23,112 +23,25 @@
                   <i class="bi bi-trash3-fill" iconPos="left" title="Eliminar"></i>
               </div>
             </div>
-            <img src="assets/img/cards/card7.jpg" class="card-img-top rounded-3" alt="...">
+            <img [src]="experiencia.Foto" class="card-img-top rounded-3" alt="...">
             <div class="card-body">
-            <h5 class="card-title">Ministerio de Desarrollo Social de la Nación</h5>
-            <p><strong>Técnico Informático Profesional</strong></p>
-            <p>Abril 2005 a la actualidad</p>
-            <p>
+              <h5 class="card-title">{{experiencia.Organizacion}}</h5>
+              <p><strong>{{experiencia.Perfil}}</strong></p>
+              <p>{{experiencia.Inicio}} a {{experiencia.Fin}}</p>
+              <p>
                 <a class="btn btn-secondary btn-sm" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
                   Detalles
                 </a>
-            </p>
-            <div class="collapse" id="collapseExample1">
+              </p>
+              <div class="collapse" id="collapseExample1">
                 <div class="card card-body">
-                  <p>Desarrollo Front End y Back End de aplicaciones con Typescript, Javascript, PHP, MySQL, HTML5. Realización de test de aplicaciones. Solución de incidencias</p>
+                  <p>{{experiencia.Detalle}}</p>
                 </div>
-            </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col mx-auto" style="width: 40%;">
-      <div class="p-3 border bg-light">
-        <div class="card mx-auto" style="width: 100%;">
-          <div class="card-header">
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end botonicono">
-                <i class="bi bi-pencil-fill" iconPos="left" title="Editar"></i>
-                <i class="bi bi-trash3-fill" iconPos="left" title="Eliminar"></i>
-            </div>
-          </div>
-          <img src="assets/img/cards/card8.jpg" class="card-img-top rounded-3" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Dirección General de Educación Vial y Licencias</h5>
-            <p><strong>Instructor Profesional</strong></p>
-            <p>Octubre 2002 a Octubre 2004</p>
-            <p>
-                <a class="btn btn-secondary btn-sm" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
-                  Detalles
-                </a>
-            </p>
-            <div class="collapse" id="collapseExample2">
-                <div class="card card-body">
-                  <p>Desarrollo Front End y Back End de aplicaciones con Typescript, Javascript, PHP, MySQL, HTML5. Realización de test de aplicaciones. Solución de incidencias</p>
-                </div>
-            </div>
-          </div>
-        </div>	
-      </div>
-      </div>
-
-      <div class="col mx-auto" style="width: 40%;">
-        <div class="p-3 border bg-light">
-          <div class="card mx-auto" style="width: 100%;">
-            <div class="card-header">
-              <div class="d-grid gap-2 d-md-flex justify-content-md-end botonicono">
-                  <i class="bi bi-pencil-fill" iconPos="left" title="Editar"></i>
-                  <i class="bi bi-trash3-fill" iconPos="left" title="Eliminar"></i>
-              </div>
-            </div>
-            <img src="assets/img/cards/card10.jpg" class="card-img-top rounded-3" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">ICONTEAM diseño web</h5>
-                <p><strong>Técnico Informático</strong></p>
-                <p>Agosto 2001 a  Diciembre 2003</p>
-                <p>
-                    <a class="btn btn-secondary btn-sm" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample">
-                      Detalles
-                    </a>
-                </p>
-                <div class="collapse" id="collapseExample3">
-                  <div class="card card-body">
-                    <p>Desarrollo Front End y Back End de aplicaciones con Typescript, Javascript, PHP, MySQL, HTML5. Realización de test de aplicaciones. Solución de incidencias</p>
-                  </div>
-                </div>
-            </div>
-          </div>	
-        </div>
-      </div>
-
-      <div class="col mx-auto" style="width: 40%;">
-        <div class="p-3 border bg-light">
-            <div class="card mx-auto" style="width: 100%;">
-              <div class="card-header">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end botonicono">
-                    <i class="bi bi-pencil-fill" iconPos="left" title="Editar"></i>
-                    <i class="bi bi-trash3-fill" iconPos="left" title="Eliminar"></i>
-                </div>
-              </div>
-              <img src="assets/img/cards/card9.jpg" class="card-img-top rounded-3" alt="...">
-              <div class="card-body">
-          <h5 class="card-title">ELSERVER SRL</h5>
-          <p><strong>Técnico Informático</strong></p>
-          <p>Octubre 2002 a Octubre 2004</p>
-          <p>
-                <a class="btn btn-secondary btn-sm" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">
-                  Detalles
-                </a>
-          </p>
-          <div class="collapse" id="collapseExample4">
-              <div class="card card-body">
-                <p>Desarrollo Front End y Back End de aplicaciones con Typescript, Javascript, PHP, MySQL, HTML5. Realización de test de aplicaciones. Solución de incidencias</p>
-              </div>
-          </div>
-              </div>
-            </div>	
-        </div>
-      </div>
+      </div>     
     </div>
   </div>      
 </div> 

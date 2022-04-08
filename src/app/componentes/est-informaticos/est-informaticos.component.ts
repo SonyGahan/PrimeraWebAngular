@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
 @Component({
   selector: 'app-est-informaticos',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./est-informaticos.component.css']
 })
 export class EstInformaticosComponent implements OnInit {
-
-  constructor() { }
+  estudiosinfList: any;
+  habilidadesList: any;
+  constructor(private datosPorfolio:PorfolioService) { }
 
   ngOnInit(): void {
-  }
+    this.datosPorfolio.obtenerDatos().subscribe( data =>{
+    this.estudiosinfList=data.FormacionInf;
+  });
 
+    this.datosPorfolio.obtenerDatos().subscribe( data =>{
+      this.habilidadesList=data.Habilidades;
+    });
+  }
 }

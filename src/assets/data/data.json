@@ -1,0 +1,127 @@
+{
+	"Nombre": "Sonia Pereira",
+	"Titulo": "Full Stack Developer Jr.",
+	"Lugar": "Buenos Aires, Argentina",
+	"FotoPerfil": "assets/img/perfilchica.jpg",
+	"IconoMDS": "assets/img/logoMDSchico2.png",
+	"NomTrabajo": "Ministerio de Desarrollo Social de la Nación",
+	"NomFacu": "Universidad de Buenos Aires | UBA",
+	"IconoUBA": "assets/img/logoingUBAchico.png",
+	"Detalle": "Programadora Junior con conocimientos de desarrollo back-end como lo referente a front-end, con estudios universitarios y capacitaciones terciarias.",
+	"Estudios":[{
+				"Foto": "assets/img/cards/card1.jpg",
+				"Formacion": "Formacion Universitaria",
+				"TituloFU": "Licenciatura en Sistemas",
+				"Organizacion": "Universidad de Buenos Aires | UBA",
+				"Fecha": "Año 1998"
+				},
+				{
+				"Foto": "assets/img/cards/card2.jpg",
+				"Formacion": "Formación Terciaria",
+				"TituloFU": "Analista de Sistemas",
+				"Organizacion": "Instituto Superior Mariano Moreno",
+				"Fecha": "Año 1995"
+				},
+				{
+				"Foto": "assets/img/cards/card3.jpg",
+				"Formacion": "Formación Terciaria",
+				"TituloFU": "Analista Programador",
+				"Organizacion": "Instituto Superior Mariano Moreno",
+				"Fecha": "Año 1994"
+				},
+				{
+				"Foto": "assets/img/cards/card4.jpg",
+				"Formacion": "Formación Terciaria",
+				"TituloFU": "Técnico Superior en Redes",
+				"Organizacion": "Instituto FUCE, Pasantia de la Facultad de Ingeniería",
+				"Fecha": "Año 2002"
+				},
+				{
+				"Foto": "assets/img/cards/card5.jpg",
+				"Formacion": "Formación Secundaria",
+				"TituloFU": "Bachiller con Orientación Docente",
+				"Organizacion": "Escuela Superior Normal Nro. 10 Juan Bautista Alberdi",
+				"Fecha": "Año 1992"	
+				},
+				{
+				"Foto": "assets/img/cards/card6.jpg",
+				"Formacion": "Idiomas",
+				"TituloFU": "Italiano",
+				"Organizacion": "Instituto Italiano di Cultura di Buenos Aires. Nivel B2, Avanzado. Bilingüe.",
+				"Fecha": "Año 2017"	
+				}
+				],
+	"FormacionInf": [{
+					"FInformaticaNombre": "Administración de Sistemas Operativos y redes",
+					"DescrInformatica": "Instalación y mantenimiento de redes y servicios de red: topología, cableado, sistemas operativos, administracion y configración. Administración de recursos, sistemas GNU/Linux, servicios Apache y Bases de Datos MySQL. Seguridad Informática: Auditorías técnicas, seguimiento de procesos internos y de seguridad."
+					},
+					{
+					"FInformaticaNombre": "Programación",
+					"DescrInformatica": "Programación orientada a objetos en Visual Basic. Conocimientos de programación en entornos web: Javascript, TypeScript, Java, Ruby y frameworks Angular, Bootstrap y Springboot."
+					},
+					{
+					"FInformaticaNombre": "Diseño Páginas Web",
+					"DescrInformatica": "HTML5, CSS y JavaScript. Paquete Macromedia, Redes Sociales."
+					},
+					{
+					"FInformaticaNombre": "Diseño Gráfico",
+					"DescrInformatica": "Paquete Adobe Master Collection, QuarkXPress."
+					},
+					{
+					"FInformaticaNombre": "Idioma",
+					"DescrInformatica": "Ingles Técnico para programadores."
+					}
+					],
+	"Habilidades": [
+					{
+					"Programa": "HTML5 & CSS",
+					"Porcentaje": "99%"
+					},
+					{
+					"Programa": "Javascript & Angular",
+					"Porcentaje": "95%"
+					},
+					{
+					"Programa": "Ruby on Rails",
+					"Porcentaje": "85%"
+					},
+					{
+					"Programa": "Diseño & Paquete Adobe",
+					"Porcentaje": "75%"
+					}
+					],	
+	"Experiencia": [
+					{
+					"Foto": "assets/img/cards/card7.jpg",
+					"Organizacion": "Ministerio de Desarrollo Social de la Nación",
+					"Perfil": "Técnico Informático Profesional",
+					"Inicio": "Abril 2005",
+					"Fin": "la actualidad",
+					"Detalle": "Desarrollo Front End y Back End de aplicaciones con Typescript, Javascript, PHP, MySQL, HTML5. Realización de test de aplicaciones. Solución de incidencias"
+					},
+					{
+					"Foto": "assets/img/cards/card8.jpg",
+					"Organizacion": "Dirección General de Educación Vial y Licencias",
+					"Perfil": "Instructor Profesional",
+					"Inicio": "Octubre 2002",
+					"Fin": "Octubre 2004",
+					"Detalle": "Desarrollo Front End y Back End de aplicaciones con Typescript, Javascript, PHP, MySQL, HTML5. Realización de test de aplicaciones. Solución de incidencias"
+					},
+					{
+					"Foto": "assets/img/cards/card10.jpg",
+					"Organizacion": "ICONTEAM diseño web",
+					"Perfil": "Técnico Informático",
+					"Inicio": "Agosto 2001",
+					"Fin": "Diciembre 2003",
+					"Detalle": "Desarrollo Front End y Back End de aplicaciones con Typescript, Javascript, PHP, MySQL, HTML5. Realización de test de aplicaciones. Solución de incidencias"
+					},
+					{
+					"Foto": "assets/img/cards/card9.jpg",
+					"Organizacion": "ELSERVER SRL",
+					"Perfil": "Técnico Informático",
+					"Inicio": "Octubre 2002",
+					"Fin": "Octubre 2004",
+					"Detalle": "Desarrollo Front End y Back End de aplicaciones con Typescript, Javascript, PHP, MySQL, HTML5. Realización de test de aplicaciones. Solución de incidencias"
+					}
+					]
+}
