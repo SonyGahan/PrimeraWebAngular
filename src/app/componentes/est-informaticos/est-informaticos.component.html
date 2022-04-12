@@ -12,7 +12,7 @@
 </div>
 
 <div class="container-xxl espacios">
-    <div *ngFor= "let estudiosinf of estudiosinfList" class="container-xxl">
+    <div *ngFor= "let informaticas of informaticasList" class="container-xxl">
         <div class="row">
             <div class="card text-dark bg-light mb-3 mx-auto" style="max-width: 90%;">
                 <div class="card-header">
@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                  <p class="card-text"><strong>{{estudiosinf.FInformaticaNombre}}: </strong>{{estudiosinf.DescrInformatica}}</p>
+                  <p class="card-text"><strong>{{informaticas.nombre}}: </strong>{{informaticas.descripcion}}</p>
                 </div>
             </div>	
         </div>

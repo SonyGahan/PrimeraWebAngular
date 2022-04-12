@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Experiencia, Habilidad } from 'src/assets/data/interface';
+import { Experiencia, Habilidad, Informatica, Instruccion } from 'src/assets/data/interface';
 import { urlback } from 'src/assets/data/rutabackend';
 
 @Injectable({
@@ -26,8 +26,13 @@ export class PorfolioService {
   }
 
 
+  obtenerInformaticas():Observable<Informatica[]>{
+    return this.http.get<Informatica[]>(`${this.urlbase}/informatica`);
+  }
 
-
+  obtenerInstrucciones():Observable<Instruccion[]>{
+    return this.http.get<Instruccion[]>(`${this.urlbase}/instruccion`);
+  }
 
 }
 
