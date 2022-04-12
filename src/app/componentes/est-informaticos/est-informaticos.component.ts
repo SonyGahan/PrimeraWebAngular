@@ -14,10 +14,10 @@ export class EstInformaticosComponent implements OnInit {
   ngOnInit(): void {
     this.datosPorfolio.obtenerDatos().subscribe( data =>{
     this.estudiosinfList=data.FormacionInf;
-  });
+    });
 
-    this.datosPorfolio.obtenerDatos().subscribe( data =>{
-      this.habilidadesList=data.Habilidades;
+    this.datosPorfolio.obtenerHabilidades().subscribe( data =>{
+    this.habilidadesList=data;
     });
   }
 }

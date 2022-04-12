@@ -13,7 +13,7 @@ export class EstudiosComponent implements OnInit {
 
   ngOnInit(): void {
     this.datosPorfolio.obtenerDatos().subscribe( data =>{
-      this.estudiosList=data.Estudios;
+   this.estudiosList=data.Estudios;
     });
   }
 

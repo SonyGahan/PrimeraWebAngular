@@ -8,8 +8,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class IniciosesionComponent implements OnInit {
   
+  form: FormGroup;
   constructor(private formBuilder:FormBuilder) {
-    
+    this.form = this.formBuilder.group(
+      {
+        
+      }
+    )
    }
 
   ngOnInit(): void {

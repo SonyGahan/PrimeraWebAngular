@@ -1,15 +1,33 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Experiencia, Habilidad } from 'src/assets/data/interface';
+import { urlback } from 'src/assets/data/rutabackend';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PorfolioService {
 
+  private urlbase: string= urlback;
   constructor(private http:HttpClient) {}
+
+  obtenerExperiencias():Observable<Experiencia[]>{
+    return this.http.get<Experiencia[]>(`${this.urlbase}/experiencia`);
+  }
 
   obtenerDatos():Observable<any>{
     return this.http.get('/assets/data/data.json');
   }
+
+
+  obtenerHabilidades():Observable<Habilidad[]>{
+    return this.http.get<Habilidad[]>(`${this.urlbase}/habilidad`);
+  }
+
+
+
+
+
 }
+

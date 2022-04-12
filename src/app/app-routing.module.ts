@@ -6,7 +6,7 @@ import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
 const routes: Routes = [
   {path: 'porfolio',component: PorfolioComponent},
   {path: 'iniciosesion',component: IniciosesionComponent},
-  {path: '', redirectTo: 'iniciosesion',pathMatch: 'full'}
+  {path: '', redirectTo: 'porfolio',pathMatch: 'full'}
 ];
 
 @NgModule({

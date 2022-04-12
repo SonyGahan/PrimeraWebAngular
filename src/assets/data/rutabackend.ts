@@ -1,0 +1,1 @@
+export const urlback: string = "http://localhost:8080";
