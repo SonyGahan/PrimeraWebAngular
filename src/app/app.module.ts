@@ -15,6 +15,11 @@ import { LoginComponent } from './componentes/login/login.component';
 import { IniciosesionComponent } from './componentes/iniciosesion/iniciosesion.component';
 import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AddexperienciaComponent } from './componentes/formulario/addexperiencia/addexperiencia.component';
+import { AddestudiosComponent } from './componentes/formulario/addestudios/addestudios.component';
+import { AddinformaticosComponent } from './componentes/formulario/addinformaticos/addinformaticos.component';
+import { AddhabilidadesComponent } from './componentes/formulario/addhabilidades/addhabilidades.component';
+
 
 
 @NgModule({
@@ -29,8 +34,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     CompetenciasComponent,
     LoginComponent,
     IniciosesionComponent,
-    PorfolioComponent
+    PorfolioComponent,
+    AddexperienciaComponent,
+    AddestudiosComponent,
+    AddinformaticosComponent,
+    AddhabilidadesComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,

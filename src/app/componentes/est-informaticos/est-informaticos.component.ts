@@ -8,7 +8,6 @@ import { Habilidad, Informatica } from 'src/assets/data/interface';
   styleUrls: ['./est-informaticos.component.css']
 })
 export class EstInformaticosComponent implements OnInit {
-  //estudiosinfList: Informatica[]=[];
   informaticasList: Informatica[]=[];
   habilidadesList: Habilidad[]=[];
   constructor(private datosPorfolio:PorfolioService) { }

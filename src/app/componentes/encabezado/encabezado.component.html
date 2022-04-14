@@ -1,4 +1,4 @@
-<div id="encabezado">
+<div *ngFor= "let dpersonal of dpersonalList" id="encabezado">
   <div>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
@@ -33,7 +33,7 @@
     </div>
 
     <div class="container float-start editaricono">
-        <img [src]="miPorfolio.FotoPerfil" class="border border-4 imagen-perfil" alt="...">
+        <img [src]="dpersonal.foto" class="border border-4 imagen-perfil" alt="...">
         <i class="bi bi-camera" iconPos="left" title="Editar Foto Perfil"></i>
         <div class="d-grid gap-2 d-md-flex justify-content-md-end botonicono">
           <i class="bi bi-pencil-square" iconPos="left" title="Editar"></i>
@@ -42,32 +42,32 @@
 
     <div class="container">
       <div class="col-12">
-         <h1 id="tituloprincipal">Porfolio Web | {{miPorfolio.Nombre}}</h1>
+         <h1 id="tituloprincipal">Porfolio Web | {{dpersonal.nombre}}</h1>
       </div> 
     </div>
 
     <div class="container" style="padding: 1%;">
       <div class="row align-items-center" style="padding-left: 7%;">
         <div class="col-4">
-          <p class="text-light h4 mt-3">{{miPorfolio.Titulo}}</p>     
+          <p class="text-light h4 mt-3">{{dpersonal.titulo}}</p>     
         </div>
         <div class="col-2">
-          <img [src]="miPorfolio.IconoMDS" alt="..." style="width: 100px; height: 50px;">
+          <img src="assets/img/logoMDSchico2.png" alt="..." style="width: 100px; height: 50px;">
         </div>
         <div class="col-6">
-          <p class="text-start text-secondary mx-3 mt-3">{{miPorfolio.NomTrabajo}}</p>
+          <p class="text-start text-secondary mx-3 mt-3">Ministerio de Desarrollo Social</p>
         </div>
       </div>
       
       <div class="row align-items-center" style="padding-left: 7%;">
         <div class="col-4">
-          <p class="text-start text-secondary">{{miPorfolio.Lugar}}</p>
+          <p class="text-start text-secondary">{{dpersonal.lugar}}</p>
         </div>
         <div class="col-2">
-          <img [src]="miPorfolio.IconoUBA" alt="...">
+          <img src="assets/img/logoingUBAchico.png" alt="...">
         </div>
         <div class="col-6">
-          <p class="text-start text-secondary mx-3 mt-3 py">{{miPorfolio.NomFacu}}</p>
+          <p class="text-start text-secondary mx-3 mt-3 py">Universidad de Buenos Aires | UBA</p>
         </div>
       </div> 
     </div>
@@ -75,7 +75,7 @@
     <div class="container" style="padding: 3%;">
       <div class="row align-items-center" style="padding-left: 7%;">
         <div class="col-12">
-          <h6 class="text-light h6 mt-3">{{miPorfolio.Detalle}}</h6>   
+          <h6 class="text-light h6 mt-3">{{dpersonal.detalle}}</h6>   
         </div>
       </div>
     </div>

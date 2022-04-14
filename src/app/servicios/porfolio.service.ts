@@ -1,14 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Experiencia, Habilidad, Informatica, Instruccion } from 'src/assets/data/interface';
+import { Dpersonal, Experiencia, Habilidad, Informatica, Instruccion } from 'src/assets/data/interface';
 import { urlback } from 'src/assets/data/rutabackend';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PorfolioService {
-
+  
   private urlbase: string= urlback;
   constructor(private http:HttpClient) {}
 
@@ -33,6 +33,11 @@ export class PorfolioService {
   obtenerInstrucciones():Observable<Instruccion[]>{
     return this.http.get<Instruccion[]>(`${this.urlbase}/instruccion`);
   }
+
+  obtenerDpersonales():Observable<Dpersonal[]>{
+    return this.http.get<Dpersonal[]>(`${this.urlbase}/dpersonal`);
+  }  
+
 
 }
 

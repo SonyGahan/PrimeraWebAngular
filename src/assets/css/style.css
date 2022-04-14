@@ -207,5 +207,26 @@ p {
   margin-left: 30px;
 }
 
+.abs-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50%
+}
 
+#fondo-form {
+  background: #939699;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 5%;
+  position: relative;
+}
   
+img {
+  max-width: 100%;
+  max-height: 100%;
+ }
+ .loguin {
+  height: 350px;
+  width: 450px;
+ }
