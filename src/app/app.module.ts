@@ -19,6 +19,7 @@ import { AddexperienciaComponent } from './componentes/formulario/addexperiencia
 import { AddestudiosComponent } from './componentes/formulario/addestudios/addestudios.component';
 import { AddinformaticosComponent } from './componentes/formulario/addinformaticos/addinformaticos.component';
 import { AddhabilidadesComponent } from './componentes/formulario/addhabilidades/addhabilidades.component';
+import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 
 
 
@@ -38,7 +39,8 @@ import { AddhabilidadesComponent } from './componentes/formulario/addhabilidades
     AddexperienciaComponent,
     AddestudiosComponent,
     AddinformaticosComponent,
-    AddhabilidadesComponent
+    AddhabilidadesComponent,
+    HabilidadesComponent
   ],
 
   imports: [

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
-import { Habilidad, Informatica } from 'src/assets/data/interface';
+import { Informatica } from 'src/assets/data/interface';
 
 @Component({
   selector: 'app-est-informaticos',
@@ -9,16 +9,12 @@ import { Habilidad, Informatica } from 'src/assets/data/interface';
 })
 export class EstInformaticosComponent implements OnInit {
   informaticasList: Informatica[]=[];
-  habilidadesList: Habilidad[]=[];
+
   constructor(private datosPorfolio:PorfolioService) { }
 
   ngOnInit(): void {
     this.datosPorfolio.obtenerInformaticas().subscribe( data2 =>{
     this.informaticasList=data2;
-    });
-
-    this.datosPorfolio.obtenerHabilidades().subscribe( data =>{
-    this.habilidadesList=data;
     });
   }
 }
