@@ -30,16 +30,16 @@
                             <div class="container">
                                 <div *ngFor= "let habilidades of habilidadesList"  class="row g-2">
                                     <div class="col-4">
-                                            <div class="p-3 border border-white">
+                                        <div class="p-3 border border-white">
                                                 <p class="level-title">{{habilidades.programa}}</p>
-                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-8">
-                                            <div class="p-3 border border-white">
+                                        <div class="p-3 border border-white">
                                                 <div class="progress">
-                                                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 99%;" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">{{habilidades.porcentaje}}</div>
+                                                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width:{{habilidades.porcentaje}}" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">{{habilidades.porcentaje}}</div>
                                                 </div> 
-                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div> 

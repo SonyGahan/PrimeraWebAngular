@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Instruccion } from 'src/assets/data/interface';
-
+import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { urlback } from 'src/assets/data/rutabackend';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addestudios',
@@ -10,16 +12,18 @@ import { Instruccion } from 'src/assets/data/interface';
 })
 export class AddestudiosComponent implements OnInit {
 
-  form: FormGroup;
-  constructor(private formBuilder:FormBuilder) {
-    this.form = this.formBuilder.group(
-      {
-        
-      }
-    )
-   }
+
+  constructor(private router: Router, private service: PorfolioService) {}
+  
 
   ngOnInit(): void {
+  }
+  Agregar(instruccion:Instruccion){
+    this.service.addInstrucciones(instruccion)
+    .subscribe(data =>{
+      alert("La formación se agrego con éxito");
+      this.router.navigate(['estudios/addestudios']);
+    })
   }
 
 }

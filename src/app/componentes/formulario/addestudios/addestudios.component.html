@@ -10,28 +10,28 @@
                 <img src="assets/img/cards/card16.jpg" class="img-fluid rounded-start" alt="...">
         </div>
         <div class="col-md-9">
-              <div class="card-body">
-                  <form class="m-5">
-                    <div class="mb-3">
-                      <label for="exampleInputformacion" class="form-label text-secondary">Formación</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputtitulo" class="form-label text-secondary">Título</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputorganizacion" class="form-label text-secondary">Organización</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputPanio" class="form-label text-secondary">Año</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <button type="submit" class="btn bg-primary text-white btn-sm mx-2">Agregar</button>
-                    <button type="submit" class="btn bg-primary text-white btn-sm">Cancelar</button>
-                  </form>
+          <div class="card-body">
+            <form [action]="" class="m-5">
+              <div class="form-group mb-3">
+                <label for="exampleInputformacion" class="form-label text-secondary">Formación</label>
+                <input type="text" class="form-control" id="formacion">
               </div>
+              <div class="form-group mb-3">
+                <label for="exampleInputtitulo" class="form-label text-secondary">Título</label>
+                <input type="text" class="form-control" id="titulo">
+              </div>
+              <div class="form-group mb-3">
+                <label for="exampleInputorganizacion" class="form-label text-secondary">Organización</label>
+                <input type="text" class="form-control" id="organizacion">
+              </div>
+              <div class="form-group mb-3">
+                <label for="exampleInputPanio" class="form-label text-secondary">Año</label>
+                <input type="text" class="form-control" id="anio">
+              </div>
+              <button (click)="Agregar" class="btn bg-primary text-white btn-sm mx-2">Agregar</button>
+              <button class="btn bg-primary text-white btn-sm">Cancelar</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

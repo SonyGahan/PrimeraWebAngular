@@ -14,13 +14,13 @@ import { HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './componentes/login/login.component';
 import { IniciosesionComponent } from './componentes/iniciosesion/iniciosesion.component';
 import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddexperienciaComponent } from './componentes/formulario/addexperiencia/addexperiencia.component';
 import { AddestudiosComponent } from './componentes/formulario/addestudios/addestudios.component';
 import { AddinformaticosComponent } from './componentes/formulario/addinformaticos/addinformaticos.component';
 import { AddhabilidadesComponent } from './componentes/formulario/addhabilidades/addhabilidades.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
-
+import { PorfolioService } from 'src/app/servicios/porfolio.service';
 
 
 @NgModule({
@@ -47,9 +47,10 @@ import { HabilidadesComponent } from './componentes/habilidades/habilidades.comp
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [PorfolioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

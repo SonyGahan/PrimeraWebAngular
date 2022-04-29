@@ -4,13 +4,16 @@ import { AddestudiosComponent } from './componentes/formulario/addestudios/addes
 import { IniciosesionComponent } from './componentes/iniciosesion/iniciosesion.component';
 import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
 import { AddexperienciaComponent } from './componentes/formulario/addexperiencia/addexperiencia.component'; 
+import { AddhabilidadesComponent } from './componentes/formulario/addhabilidades/addhabilidades.component';
+import { AddinformaticosComponent } from './componentes/formulario/addinformaticos/addinformaticos.component';
 
 const routes: Routes = [
   {path: 'porfolio',component: PorfolioComponent},
   {path: 'iniciosesion',component: IniciosesionComponent},
   {path: 'estudios/addestudios', component: AddestudiosComponent},
   {path: 'exp-laboral/addexperiencia', component: AddexperienciaComponent},
-  {path: 'competencias/addestudios', component: AddestudiosComponent},
+  {path: 'habilidades/addhabilidades', component: AddhabilidadesComponent},
+  {path: 'est-informaticos/addinformaticos', component: AddinformaticosComponent},
   {path: '', redirectTo: 'porfolio',pathMatch: 'full'}
 ];
 
