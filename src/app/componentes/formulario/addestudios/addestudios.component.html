@@ -11,24 +11,24 @@
         </div>
         <div class="col-md-9">
           <div class="card-body">
-            <form [action]="" class="m-5">
+            <form (ngSubmit)="onSubmit()" class="m-5">
               <div class="form-group mb-3">
-                <label for="exampleInputformacion" class="form-label text-secondary">Formación</label>
-                <input type="text" class="form-control" id="formacion">
+                <label class="form-label text-secondary">Formación</label>
+                <input type="text" class="form-control" id="formacion" [(ngModel)]="nuevoestudio.formacion" name="formacion">
               </div>
               <div class="form-group mb-3">
-                <label for="exampleInputtitulo" class="form-label text-secondary">Título</label>
-                <input type="text" class="form-control" id="titulo">
+                <label class="form-label text-secondary">Título</label>
+                <input type="text" class="form-control" id="titulo" [(ngModel)]="nuevoestudio.titulo" name="titulo">
               </div>
               <div class="form-group mb-3">
-                <label for="exampleInputorganizacion" class="form-label text-secondary">Organización</label>
-                <input type="text" class="form-control" id="organizacion">
+                <label class="form-label text-secondary">Organización</label>
+                <input type="text" class="form-control" id="organizacion" [(ngModel)]="nuevoestudio.organizacion" name="organizacion">
               </div>
               <div class="form-group mb-3">
-                <label for="exampleInputPanio" class="form-label text-secondary">Año</label>
-                <input type="text" class="form-control" id="anio">
+                <label class="form-label text-secondary">Año</label>
+                <input type="text" class="form-control" id="fegreso" [(ngModel)]="nuevoestudio.fegreso" name="fegreso">
               </div>
-              <button (click)="Agregar" class="btn bg-primary text-white btn-sm mx-2">Agregar</button>
+              <button (click)="Agregar(nuevoestudio)" class="btn bg-primary text-white btn-sm mx-2">Agregar</button>
               <button class="btn bg-primary text-white btn-sm">Cancelar</button>
             </form>
           </div>

@@ -15,22 +15,21 @@ export interface Habilidad{
 }
 
 export interface Informatica{
-    id: number;
+    id?: number;
     nombre: string;
     descripcion: string;
 }
 
 export interface Instruccion{
-    id: number;
+    id?: number;
     formacion: string;
     titulo: string;
     organizacion: string;
     fegreso: string;
-    imagen: string;
 }
 
 export interface Dpersonal{
-    id: number;
+    id?: number;
     nombre: string;
     apellido: string;
     titulo: string;

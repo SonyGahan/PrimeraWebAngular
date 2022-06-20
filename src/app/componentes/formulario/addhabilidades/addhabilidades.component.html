@@ -11,16 +11,16 @@
         </div>
         <div class="col-md-9">
             <div class="card-body">
-              <form class="m-5">
+              <form (ngSubmit)="onSubmit()" class="m-5">
                 <div class="mb-3">
-                      <label for="exampleInputformacion" class="form-label text-secondary">Programas</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <label class="form-label text-secondary">Programas</label>
+                      <input type="text" class="form-control" id="programa" [(ngModel)]="nuevahabilidad.programa" name="programa">
                 </div>
                 <div class="mb-3">
-                      <label for="exampleInputtitulo" class="form-label text-secondary">Porcentaje</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <label class="form-label text-secondary">Porcentaje</label>
+                      <input type="text" class="form-control" id="porcentaje" [(ngModel)]="nuevahabilidad.porcentaje" name="porcentaje">
                 </div>
-                <button type="submit" class="btn bg-primary text-white btn-sm mx-2">Agregar</button>
+                <button (click)="Agregar(nuevahabilidad)" class="btn bg-primary text-white btn-sm mx-2">Agregar</button>
                 <button type="submit" class="btn bg-primary text-white btn-sm">Cancelar</button>
               </form>
             </div>

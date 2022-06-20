@@ -11,28 +11,28 @@
         </div>
         <div class="col-md-9">
               <div class="card-body">
-                  <form class="m-5">
+                  <form form (ngSubmit)="onSubmit()" class="m-5">
                     <div class="mb-3">
-                      <label for="exampleInputformacion" class="form-label text-secondary">Nombre</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <label class="form-label text-secondary">Nombre</label>
+                      <input type="text" class="form-control" id="nombre" [(ngModel)]="nuevaexperiencia.nombre" name="nombre">
                     </div>
                     <div class="mb-3">
-                      <label for="exampleInputtitulo" class="form-label text-secondary">Perfil</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <label class="form-label text-secondary">Perfil</label>
+                      <input type="text" class="form-control" id="perfil" [(ngModel)]="nuevaexperiencia.perfil" name="perfil">
                     </div>
                     <div class="mb-3">
-                      <label for="exampleInputorganizacion" class="form-label text-secondary">Fecha Ingreso</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <label class="form-label text-secondary">Fecha Ingreso</label>
+                      <input type="text" class="form-control" id="finicio" [(ngModel)]="nuevaexperiencia.finicio" name="finicio">
                     </div>
                     <div class="mb-3">
-                      <label for="exampleInputPanio" class="form-label text-secondary">Fecha Egreso</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <label class="form-label text-secondary">Fecha Egreso</label>
+                      <input type="text" class="form-control" id="ffinal" [(ngModel)]="nuevaexperiencia.ffinal" name="ffinal">
                     </div>
                     <div class="mb-3">
-                      <label for="exampleInputPanio" class="form-label text-secondary">Detalles</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
+                      <label class="form-label text-secondary">Detalles</label>
+                      <input type="text" class="form-control" id="detalle" [(ngModel)]="nuevaexperiencia.detalle" name="detalle">
                     </div>
-                    <button type="submit" class="btn bg-primary text-white btn-sm mx-2">Agregar</button>
+                    <button (click)="Agregar(nuevaexperiencia)" class="btn bg-primary text-white btn-sm mx-2">Agregar</button>
                     <button type="submit" class="btn bg-primary text-white btn-sm">Cancelar</button>
                   </form>
               </div>

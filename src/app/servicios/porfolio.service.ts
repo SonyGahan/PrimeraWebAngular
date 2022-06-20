@@ -24,6 +24,11 @@ export class PorfolioService {
     return this.http.get('/assets/data/data.json');
   }
 
+  //metodo agregar una nueva experiencia//
+  addExperiencias(nuevaexperiencia:Experiencia): Observable<Experiencia>{
+    return this.http.post<Experiencia>(`${this.urlbase}/experiencia/agregar`, nuevaexperiencia);
+  }
+
   //Seccion Habilidades//
 
   //listado de Habilidades//
@@ -31,7 +36,10 @@ export class PorfolioService {
     return this.http.get<Habilidad[]>(`${this.urlbase}/habilidad`);
   }
 
-
+  //metodo agregar una nueva habilidad//
+  addHabilidades(nuevahabilidad:Habilidad): Observable<Habilidad>{
+    return this.http.post<Habilidad>(`${this.urlbase}/habilidad/agregar`, nuevahabilidad);
+  }
   
   //Seccion Formación Técnica Informática//
 
@@ -41,8 +49,8 @@ export class PorfolioService {
   }
 
   //metodo agregar una nueva instruccion//
-  addInformaticas(informatica: Informatica): Observable<Informatica>{
-    return this.http.post<Informatica>(`${this.urlbase}/informatica/agregar`, informatica);
+  addInformaticas(nuevainformatica: Informatica): Observable<Informatica>{
+    return this.http.post<Informatica>(`${this.urlbase}/informatica/agregar`, nuevainformatica);
   }
 
 
@@ -56,8 +64,8 @@ export class PorfolioService {
   }
 
   //metodo agregar una nueva instruccion//
-  addInstrucciones(instruccion:Instruccion): Observable<Instruccion>{
-    return this.http.post<Instruccion>(`${this.urlbase}/instruccion/agregar`, instruccion);
+  addInstrucciones(nuevoestudio:Instruccion): Observable<Instruccion>{
+    return this.http.post<Instruccion>(`${this.urlbase}/instruccion/agregar`, nuevoestudio);
   }
 
 

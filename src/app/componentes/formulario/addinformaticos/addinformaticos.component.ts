@@ -12,18 +12,26 @@ import { Informatica } from 'src/assets/data/interface';
 
 export class AddinformaticosComponent implements OnInit {
 
+  nuevainformatica: Informatica = {
+    nombre: '', 
+    descripcion: '', 
+  }
+
   constructor(private router: Router, private service: PorfolioService) { }
 
   ngOnInit(): void {
   }
   
-  Guardar(informatica: Informatica){
-    this.service.addInformaticas(informatica)
+  onSubmit(){
+    console.log(this.nuevainformatica); 
+  }
+
+  Agregar(nuevainformatica: Informatica){
+    this.service.addInformaticas(nuevainformatica)
     .subscribe(data =>{
-      alert('Se agrego con exito!');
-      this.router.navigate(["porfolio"]);
+      alert("La formación se agrego con éxito");
+      this.router.navigate(['est-informaticos/addinformaticos']);
     })
   }
-  
 
 }
