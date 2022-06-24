@@ -48,7 +48,7 @@ export class PorfolioService {
     return this.http.get<Informatica[]>(`${this.urlbase}/informatica`);
   }
 
-  //metodo agregar una nueva instruccion//
+  //metodo agregar una nueva instruccion informatica//
   addInformaticas(nuevainformatica: Informatica): Observable<Informatica>{
     return this.http.post<Informatica>(`${this.urlbase}/informatica/agregar`, nuevainformatica);
   }
@@ -58,15 +58,32 @@ export class PorfolioService {
   
   //Seccion Instruccion y Formacion Profesional//
 
-  //listado de Instruccion//
+  //listado de Estudios//
   obtenerInstrucciones():Observable<Instruccion[]>{
     return this.http.get<Instruccion[]>(`${this.urlbase}/instruccion`);
   }
 
-  //metodo agregar una nueva instruccion//
+  //obtener Estudios por ID//
+  obtenerInstruccionesPorId(id: number): Observable<Instruccion>{
+    return this.http.get<Instruccion>(`${this.urlbase}/instruccion/${id}`);
+   }
+
+
+  //metodo agregar un nuevo estudio//
   addInstrucciones(nuevoestudio:Instruccion): Observable<Instruccion>{
     return this.http.post<Instruccion>(`${this.urlbase}/instruccion/agregar`, nuevoestudio);
   }
+
+  //metodo para editar un estudio por ID//
+  editarInstrucciones(editarestudio:Instruccion): Observable<Instruccion>{
+    return this.http.put<Instruccion>(`${this.urlbase}/instruccion/editar/${editarestudio.id}`, editarestudio);
+  }
+
+  //metodo para eliminar un estudio por ID//
+  borrarInstrucciones(id: number): Observable<Instruccion>{
+    return this.http.delete<Instruccion>(`${this.urlbase}/instruccion/eliminar/${id}`);
+   }
+
 
 
 

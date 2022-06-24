@@ -9,18 +9,30 @@ import { Router } from '@angular/router';
   templateUrl: './estudios.component.html',
   styleUrls: ['./estudios.component.css']
 })
+
 export class EstudiosComponent implements OnInit {
+  
   estudiosList: Instruccion[]=[];
-  constructor(private datosPorfolio:PorfolioService, private router: Router) { }
+
+  constructor(private service:PorfolioService, private router: Router) { }
+  
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerInstrucciones().subscribe( data =>{
+    this.service.obtenerInstrucciones().subscribe( data =>{
     this.estudiosList=data;
     });
   }
 
   addestudios(){
     this.router.navigate(['/estudios/addestudios'])
+  }
+
+  borrar(id: number){
+    this.service.borrarInstrucciones(id).subscribe(data =>{
+      alert("La formación se eliminó con éxito");
+      console.log(data);
+      this.router.navigate(['/porfolio']);
+    });
   }
 
 }

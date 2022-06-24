@@ -30,8 +30,12 @@ export class AddinformaticosComponent implements OnInit {
     this.service.addInformaticas(nuevainformatica)
     .subscribe(data =>{
       alert("La formación se agrego con éxito");
-      this.router.navigate(['est-informaticos/addinformaticos']);
+      this.router.navigate(['/porfolio']);
     })
+  }
+
+  cancelar(){
+    this.router.navigate(['/porfolio'])
   }
 
 }

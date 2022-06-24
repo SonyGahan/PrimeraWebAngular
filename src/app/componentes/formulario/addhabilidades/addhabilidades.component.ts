@@ -28,8 +28,12 @@ export class AddhabilidadesComponent implements OnInit {
     this.service.addHabilidades(nuevahabilidad)
     .subscribe(data =>{
       alert("La formación se agrego con éxito");
-      this.router.navigate(['habilidades/addhabilidades']);
+      this.router.navigate(['/porfolio']);
     })
+  }
+
+  cancelar(){
+    this.router.navigate(['/porfolio'])
   }
 
 }

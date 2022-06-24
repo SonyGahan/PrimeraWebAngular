@@ -21,6 +21,10 @@ import { AddinformaticosComponent } from './componentes/formulario/addinformatic
 import { AddhabilidadesComponent } from './componentes/formulario/addhabilidades/addhabilidades.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
+import { EditarEstudiosComponent } from './componentes/formulario/editar-estudios/editar-estudios.component';
+import { EditarExperienciaComponent } from './componentes/formulario/editar-experiencia/editar-experiencia.component';
+import { EditarHabilidadesComponent } from './componentes/formulario/editar-habilidades/editar-habilidades.component';
+import { EditarInformaticosComponent } from './componentes/formulario/editar-informaticos/editar-informaticos.component';
 
 
 @NgModule({
@@ -40,7 +44,11 @@ import { PorfolioService } from 'src/app/servicios/porfolio.service';
     AddestudiosComponent,
     AddinformaticosComponent,
     AddhabilidadesComponent,
-    HabilidadesComponent
+    HabilidadesComponent,
+    EditarEstudiosComponent,
+    EditarExperienciaComponent,
+    EditarHabilidadesComponent,
+    EditarInformaticosComponent
   ],
 
   imports: [

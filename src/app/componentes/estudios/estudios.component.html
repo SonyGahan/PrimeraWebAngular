@@ -23,23 +23,24 @@
   <div class="container overflow-hidden" style="max-width: 98%">
     <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
       <div *ngFor= "let estudios of estudiosList" class="col">
-            <div class="p-3 border bg-light rounded">
-                  <div class="card" style="width: 100%;">
-                      <div class="card-header">
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end botonicono">
-                            <i class="bi bi-pencil-fill" iconPos="left" title="Editar"></i>
-                            <i class="bi bi-trash3-fill" iconPos="left" title="Eliminar"></i>
-                        </div>
-                      </div>
-                      
-                      <div class="card-body">
-                          <h5 class="card-title">{{estudios.formacion}}</h5>
-                          <p><strong>{{estudios.titulo}}</strong></p>
-                          <p>{{estudios.organizacion}}</p>
-                          <p> Año {{estudios.fegreso}}</p>
-                      </div>
-                  </div>
+        <div class="p-3 border bg-light rounded">
+          <div class="card" style="width: 100%;">
+            <div class="card-header">
+              <div class="d-grid gap-2 d-md-flex justify-content-md-end botonicono">
+                <i class="bi bi-pencil-fill" iconPos="left" title="Editar"></i>
+                <i (click)="borrar(estudios.id)" class="bi bi-trash3-fill" iconPos="left" title="Eliminar"></i>
+              </div>
             </div>
+                      
+            <div class="card-body">
+              <h5 class="card-title">{{estudios.formacion}}</h5>
+              <p><strong>{{estudios.titulo}}</strong></p>
+              <p>{{estudios.organizacion}}</p>
+              <p>{{estudios.id}}</p>
+              <p> Año {{estudios.fegreso}}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>      

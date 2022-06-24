@@ -7,6 +7,7 @@ import { Dpersonal } from 'src/assets/data/interface';
   templateUrl: './encabezado.component.html',
   styleUrls: ['./encabezado.component.css']
 })
+
 export class EncabezadoComponent implements OnInit {
   dpersonalList: Dpersonal[]=[]
   constructor(private datosPorfolio:PorfolioService) { }

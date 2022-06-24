@@ -32,8 +32,12 @@ export class AddexperienciaComponent implements OnInit {
     this.service.addExperiencias(nuevaexperiencia)
     .subscribe(data =>{
       alert("La formación se agrego con éxito");
-      this.router.navigate(['exp-laboral/addexperiencia']);
+      this.router.navigate(['/porfolio']);
     })
+  }
+
+  cancelar(){
+    this.router.navigate(['/porfolio'])
   }
 
 }
