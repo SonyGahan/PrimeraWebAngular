@@ -64,7 +64,7 @@ export class PorfolioService {
   }
 
   //obtener Estudios por ID//
-  obtenerInstruccionesPorId(id: number): Observable<Instruccion>{
+  obtenerInstruccionesPorId(id?: number): Observable<Instruccion>{
     return this.http.get<Instruccion>(`${this.urlbase}/instruccion/${id}`);
    }
 
@@ -80,7 +80,7 @@ export class PorfolioService {
   }
 
   //metodo para eliminar un estudio por ID//
-  borrarInstrucciones(id: number): Observable<Instruccion>{
+  borrarInstrucciones(id?: number): Observable<Instruccion>{
     return this.http.delete<Instruccion>(`${this.urlbase}/instruccion/eliminar/${id}`);
    }
 
@@ -94,6 +94,10 @@ export class PorfolioService {
     return this.http.get<Dpersonal[]>(`${this.urlbase}/dpersonal`);
   }  
 
+  //Editar Datos Personales//
+  editarDpersonales(editardatospersonal:Dpersonal): Observable<Dpersonal>{
+    return this.http.put<Dpersonal>(`${this.urlbase}/instruccion/editar/${editardatospersonal.id}`, editardatospersonal);
+  }
 
   
 

@@ -31,8 +31,9 @@ export class AddexperienciaComponent implements OnInit {
   Agregar(nuevaexperiencia:Experiencia){
     this.service.addExperiencias(nuevaexperiencia)
     .subscribe(data =>{
-      alert("La formación se agrego con éxito");
+      console.log(data);
       this.router.navigate(['/porfolio']);
+      alert("La formación se agrego con éxito");
     })
   }
 

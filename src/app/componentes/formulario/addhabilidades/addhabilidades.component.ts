@@ -27,8 +27,9 @@ export class AddhabilidadesComponent implements OnInit {
   Agregar(nuevahabilidad:Habilidad){
     this.service.addHabilidades(nuevahabilidad)
     .subscribe(data =>{
-      alert("La formación se agrego con éxito");
+      console.log(data);
       this.router.navigate(['/porfolio']);
+      alert("La formación se agrego con éxito");
     })
   }
 

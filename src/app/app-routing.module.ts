@@ -22,9 +22,13 @@ const routes: Routes = [
   {path: 'habilidades/addhabilidades', component: AddhabilidadesComponent},
   {path: 'est-informaticos/addinformaticos', component: AddinformaticosComponent},
   {path: 'estudios/editar-estudios/:id', component: EditarEstudiosComponent},
+  {path: 'estudios/editar-estudios', component: EditarEstudiosComponent},
   {path: 'exp-laboral/editar-experiencia/:id', component: EditarExperienciaComponent},
+  {path: 'exp-laboral/editar-experiencia', component: EditarExperienciaComponent},
   {path: 'habilidades/editar-habilidades/:id', component: EditarHabilidadesComponent},
+  {path: 'habilidades/editar-habilidades', component: EditarHabilidadesComponent},
   {path: 'est-informaticos/editar-informaticos/:id', component: EditarInformaticosComponent},
+  {path: 'est-informaticos/editar-informaticos', component: EditarInformaticosComponent},
 
   {path: '', redirectTo: 'porfolio',pathMatch: 'full'}
 ];

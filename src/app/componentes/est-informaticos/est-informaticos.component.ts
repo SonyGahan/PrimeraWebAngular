@@ -22,4 +22,8 @@ export class EstInformaticosComponent implements OnInit {
   addinformatica(){
     this.router.navigate(['/est-informaticos/addinformaticos'])
   }
+
+  editarinformatica(){
+    this.router.navigate(['/est-informaticos/editar-informaticos']);
+  }
 }

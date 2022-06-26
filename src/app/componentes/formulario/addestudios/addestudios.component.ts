@@ -33,8 +33,9 @@ export class AddestudiosComponent implements OnInit {
   Agregar(nuevoestudio:Instruccion){
     this.service.addInstrucciones(nuevoestudio)
     .subscribe(data =>{
-      alert("La formación se agrego con éxito");
+      console.log(data);
       this.router.navigate(['/porfolio']);
+      alert("La instrucción se agregó con éxito");
     })
   }
 

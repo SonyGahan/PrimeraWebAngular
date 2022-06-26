@@ -21,4 +21,8 @@ export class HabilidadesComponent implements OnInit {
   addhabilidad(){
     this.router.navigate(['/habilidades/addhabilidades'])
   }
+
+  editarhabilidad(){
+    this.router.navigate(['/habilidades/editar-habilidades']);
+  }
 }

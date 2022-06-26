@@ -29,8 +29,9 @@ export class AddinformaticosComponent implements OnInit {
   Agregar(nuevainformatica: Informatica){
     this.service.addInformaticas(nuevainformatica)
     .subscribe(data =>{
-      alert("La formación se agrego con éxito");
+      console.log(data);
       this.router.navigate(['/porfolio']);
+      alert("La formación se agrego con éxito");
     })
   }
 

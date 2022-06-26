@@ -27,12 +27,14 @@ export class EstudiosComponent implements OnInit {
     this.router.navigate(['/estudios/addestudios'])
   }
 
-  borrar(id: number){
+  borrar(id?: number){
     this.service.borrarInstrucciones(id).subscribe(data =>{
+      this.service.obtenerInstrucciones();
       alert("La formación se eliminó con éxito");
-      console.log(data);
-      this.router.navigate(['/porfolio']);
     });
   }
 
+  editarestudios(){
+    this.router.navigate(['/estudios/editar-estudios']);
+  }
 }

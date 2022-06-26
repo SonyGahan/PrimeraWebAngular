@@ -23,4 +23,8 @@ export class ExpLaboralComponent implements OnInit {
   addlaboral(){
     this.router.navigate(['/exp-laboral/addexperiencia'])
   }
+
+  editarlaboral(){
+    this.router.navigate(['/exp-laboral/editar-experiencia']);
+  }
 }

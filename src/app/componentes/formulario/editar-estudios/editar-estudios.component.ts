@@ -31,8 +31,8 @@ export class EditarEstudiosComponent implements OnInit {
     this.router.navigate(['/porfolio'])
   }
 
-  Editar(editarestudio:Instruccion){
-
+  editarEstudio(editarestudio:Instruccion){
+    
   }
 
 }
