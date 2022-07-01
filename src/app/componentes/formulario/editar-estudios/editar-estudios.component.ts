@@ -10,12 +10,7 @@ import { Instruccion } from 'src/assets/data/interface';
 })
 export class EditarEstudiosComponent implements OnInit {
 
-  editarestudio: Instruccion = {
-    formacion: '', 
-    titulo: '', 
-    organizacion: '', 
-    fegreso: '', 
-  }
+  editarestudios: Instruccion = new Instruccion();
 
 
   constructor(private router: Router, private service: PorfolioService) { }
@@ -24,15 +19,19 @@ export class EditarEstudiosComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.editarestudio); 
+    console.log(this.editarestudios); 
   }
 
   cancelar(){
     this.router.navigate(['/porfolio'])
   }
 
-  editarEstudio(editarestudio:Instruccion){
-    
+  actualizar(editarestudios: Instruccion){
+    this.service.editarInstrucciones(editarestudios)
+      .subscribe ( data => {
+        this.editarestudios=data;
+        alert("El estudio se actualizó con exito");
+        this.router.navigate(['/educacion']);
+      })
   }
-
 }

@@ -1,8 +1,10 @@
-import { NgStyle } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { Instruccion } from 'src/assets/data/interface';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { switchMap } from 'rxjs';
+import { FormGroup, FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-estudios',
@@ -14,7 +16,18 @@ export class EstudiosComponent implements OnInit {
   
   estudiosList: Instruccion[]=[];
 
-  constructor(private service:PorfolioService, private router: Router) { }
+  addEducationForm: FormGroup = this.fb.group({
+    id:[,[]], 
+    formacion:[,[]],       
+    titulo:[,[]],          
+    organizacion:[,[]],             
+    fegreso:[,[]]
+    })
+
+  estudios: any;
+
+
+  constructor(private service:PorfolioService, private router: Router, private activatedRoute:ActivatedRoute, private fb: FormBuilder) { }
   
 
   ngOnInit(): void {
@@ -24,17 +37,32 @@ export class EstudiosComponent implements OnInit {
   }
 
   addestudios(){
-    this.router.navigate(['/estudios/addestudios'])
+    this.router.navigate(['/estudios/addestudios']);
   }
 
   borrar(id?: number){
     this.service.borrarInstrucciones(id).subscribe(data =>{
-      this.service.obtenerInstrucciones();
       alert("La formación se eliminó con éxito");
+      this.service.obtenerInstrucciones().subscribe( data =>{
+        this.estudiosList=data;
+      });
     });
   }
 
-  editarestudios(){
+  editar(estudios: Instruccion): void{
+    switchMap( ({id}) => this.service.obtenerInstruccionesPorId(+id))
+      .subscribe( data => {this.estudios = data,
+        
+        this.addEducationForm.reset({
+          id: this.estudios.id,
+          formacion: this.estudios.formacion,   
+          titulo: this.estudios.titulo,     
+          organizacion: this.estudios.organizacion,     
+          fegreso: this.estudios.fegreso
+        })   
+      });
+    
     this.router.navigate(['/estudios/editar-estudios']);
   }
+
 }

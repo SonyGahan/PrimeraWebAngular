@@ -6,10 +6,6 @@ import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
 import { AddexperienciaComponent } from './componentes/formulario/addexperiencia/addexperiencia.component'; 
 import { AddhabilidadesComponent } from './componentes/formulario/addhabilidades/addhabilidades.component';
 import { AddinformaticosComponent } from './componentes/formulario/addinformaticos/addinformaticos.component';
-import { EditarEstudiosComponent } from './componentes/formulario/editar-estudios/editar-estudios.component';
-import { EditarExperienciaComponent } from './componentes/formulario/editar-experiencia/editar-experiencia.component';
-import { EditarHabilidadesComponent } from './componentes/formulario/editar-habilidades/editar-habilidades.component';
-import { EditarInformaticosComponent } from './componentes/formulario/editar-informaticos/editar-informaticos.component';
 import { EstudiosComponent } from './componentes/estudios/estudios.component';
 
 
@@ -18,18 +14,10 @@ const routes: Routes = [
   {path: 'iniciosesion',component: IniciosesionComponent},
   {path: 'estudios',component: EstudiosComponent},
   {path: 'estudios/addestudios', component: AddestudiosComponent},
+  {path: 'estudios/addestudios/:id', component: AddestudiosComponent},
   {path: 'exp-laboral/addexperiencia', component: AddexperienciaComponent},
   {path: 'habilidades/addhabilidades', component: AddhabilidadesComponent},
   {path: 'est-informaticos/addinformaticos', component: AddinformaticosComponent},
-  {path: 'estudios/editar-estudios/:id', component: EditarEstudiosComponent},
-  {path: 'estudios/editar-estudios', component: EditarEstudiosComponent},
-  {path: 'exp-laboral/editar-experiencia/:id', component: EditarExperienciaComponent},
-  {path: 'exp-laboral/editar-experiencia', component: EditarExperienciaComponent},
-  {path: 'habilidades/editar-habilidades/:id', component: EditarHabilidadesComponent},
-  {path: 'habilidades/editar-habilidades', component: EditarHabilidadesComponent},
-  {path: 'est-informaticos/editar-informaticos/:id', component: EditarInformaticosComponent},
-  {path: 'est-informaticos/editar-informaticos', component: EditarInformaticosComponent},
-
   {path: '', redirectTo: 'porfolio',pathMatch: 'full'}
 ];
 

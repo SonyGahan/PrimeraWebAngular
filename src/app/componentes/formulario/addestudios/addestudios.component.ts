@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Instruccion } from 'src/assets/data/interface';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
-import { urlback } from 'src/assets/data/rutabackend';
 import { Router } from '@angular/router';
 
 @Component({
@@ -19,7 +18,7 @@ export class AddestudiosComponent implements OnInit {
     fegreso: '', 
   }
 
-
+  
   constructor(private router: Router, private service: PorfolioService) {}
   
 
@@ -40,7 +39,7 @@ export class AddestudiosComponent implements OnInit {
   }
 
   cancelar(){
-    this.router.navigate(['/porfolio'])
+    this.router.navigate(['/porfolio']);
   }
 
 }
