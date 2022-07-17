@@ -33,7 +33,8 @@
             </a>
           </li>
       </ul>
-      <button type="button" class="btn btn-outline-light btn-sm" (click)="login()">Login</button>
+      <button type="button" class="btn btn-outline-light btn-sm" (click)="login()" *ngIf="!isLogged">Login</button>
+      <button type="button" class="btn btn-outline-light btn-sm" (click)="onLogOut()" *ngIf="isLogged">Logout</button>
     </div>
   </div>
 </nav>

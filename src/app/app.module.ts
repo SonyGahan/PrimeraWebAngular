@@ -22,6 +22,7 @@ import { AddhabilidadesComponent } from './componentes/formulario/addhabilidades
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { EditarEstudiosComponent } from './componentes/formulario/editar-estudios/editar-estudios.component';
+import { interceptorProvider } from './servicios/interceptor-service';
 
 
 
@@ -53,7 +54,7 @@ import { EditarEstudiosComponent } from './componentes/formulario/editar-estudio
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [PorfolioService],
+  providers: [PorfolioService, interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

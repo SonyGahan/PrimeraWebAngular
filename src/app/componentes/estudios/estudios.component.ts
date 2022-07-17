@@ -25,7 +25,7 @@ export class EstudiosComponent implements OnInit {
     })
 
   estudios: any;
-
+  
 
   constructor(private service:PorfolioService, private router: Router, private activatedRoute:ActivatedRoute, private fb: FormBuilder) { }
   
@@ -50,17 +50,17 @@ export class EstudiosComponent implements OnInit {
   }
 
   editar(estudios: Instruccion): void{
-    switchMap( ({id}) => this.service.obtenerInstruccionesPorId(+id))
-      .subscribe( data => {this.estudios = data,
+    //switchMap( ({id}) => this.service.obtenerInstruccionesPorId(id)
+    //  .subscribe( data => {this.estudios = data,
         
-        this.addEducationForm.reset({
-          id: this.estudios.id,
-          formacion: this.estudios.formacion,   
-          titulo: this.estudios.titulo,     
-          organizacion: this.estudios.organizacion,     
-          fegreso: this.estudios.fegreso
-        })   
-      });
+    //    this.addEducationForm.reset({
+    //      id: this.estudios.id,
+    //      formacion: this.estudios.formacion,   
+    //      titulo: this.estudios.titulo,     
+    //      organizacion: this.estudios.organizacion,     
+    //      fegreso: this.estudios.fegreso
+    //    })  
+    //  })); 
     
     this.router.navigate(['/estudios/editar-estudios']);
   }

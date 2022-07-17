@@ -9,8 +9,9 @@ import { Instruccion } from 'src/assets/data/interface';
   styleUrls: ['./editar-estudios.component.css']
 })
 export class EditarEstudiosComponent implements OnInit {
+  
 
-  editarestudios: Instruccion = new Instruccion();
+ // editarestudios : Instruccion;
 
 
   constructor(private router: Router, private service: PorfolioService) { }
@@ -19,19 +20,19 @@ export class EditarEstudiosComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.editarestudios); 
+    //console.log(this.editarestudios); 
   }
 
   cancelar(){
     this.router.navigate(['/porfolio'])
   }
 
-  actualizar(editarestudios: Instruccion){
-    this.service.editarInstrucciones(editarestudios)
-      .subscribe ( data => {
-        this.editarestudios=data;
-        alert("El estudio se actualizó con exito");
-        this.router.navigate(['/educacion']);
-      })
-  }
+  //actualizar(editarestudios: Instruccion){
+  //  this.service.editarInstrucciones(editarestudios)
+  //    .subscribe ( data => {
+  //      this.editarestudios=data;
+  //      alert("El estudio se actualizó con exito");
+  //      this.router.navigate(['/educacion']);
+  //    })
+  //}
 }

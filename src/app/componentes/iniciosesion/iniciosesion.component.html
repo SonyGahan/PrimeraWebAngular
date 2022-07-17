@@ -1,31 +1,40 @@
 <div class="container-xxl" id="fondo-form">
   <div class="col-sm-12 espacios">
-    <div class="card mb-4 mx-auto" style="max-width: 80%;"> 
+    <div class="card mb-4 mx-auto" style="max-width: 80%;">
       <div class="card-header bg-secondary">
         <h4 class="m-2 text-center text-white">Iniciar Sesión</h4>
       </div>
-      
+
       <div class="row g-0">
         <div class="col-md-4 loguin">
-                <img src="assets/img/cards/loguin.jpg" class="img-fluid rounded-start" alt="...">
+          <img src="assets/img/cards/loguin.jpg" class="img-fluid rounded-start" alt="...">
         </div>
         <div class="col-md-8">
-              <div class="card-body">
-                  <form class="m-5">
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label text-secondary">Email</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label text-secondary">Contraseña</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <button type="submit" class="btn bg-primary text-white btn-sm mx-2">Login</button>
-                    <button (click)="cancelar()" class="btn bg-primary text-white btn-sm">Cancelar</button>
-                  </form>
+          <div class="card-body">
+            <form #f="ngForm" (ngSubmit)="onLogin()" novalidate class="m-5">
+              <div class="mb-3">
+                <label for="nombreUsuario" class="form-label text-secondary">Usuario</label>
+                <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg"
+                [(ngModel)]="nombreUsuario" required />
               </div>
+              <div class="mb-3">
+                <label for="password" class="form-label text-secondary">Contraseña</label>
+                <input type="password" id="password" name="password" class="form-control form-control-lg" 
+                [(ngModel)]="password" required />
+              </div>
+
+               <!-- <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p> -->
+
+              <button type="submit" class="btn bg-primary text-white btn-sm mx-2">Login</button>
+              <button (click)="cancelar()" class="btn bg-primary text-white btn-sm">Cancelar</button>
+            </form>
+
+            <div>
+              <p class="mb-0">¿No tienes una cuenta? <a href="#!" class="text-grey-50 fw-bold">Sign Up</a></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>	
+  </div>
 </div>
