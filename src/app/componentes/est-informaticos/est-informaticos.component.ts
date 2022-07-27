@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { Informatica } from 'src/assets/data/interface';
 import { Router } from '@angular/router';
+import { TokenService } from 'src/app/servicios/token.service';
 
 @Component({
   selector: 'app-est-informaticos',
@@ -9,21 +10,40 @@ import { Router } from '@angular/router';
   styleUrls: ['./est-informaticos.component.css']
 })
 export class EstInformaticosComponent implements OnInit {
-  informaticasList: Informatica[]=[];
+  informaticasList: Informatica[] = [];
 
-  constructor(private datosPorfolio:PorfolioService, private router: Router) { }
+  constructor(private datosPorfolio: PorfolioService, private router: Router, private tokenService: TokenService) { }
+
+  isLogged = false;
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerInformaticas().subscribe( data2 =>{
-    this.informaticasList=data2;
+    this.cargarInformatica();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+
+
+  cargarInformatica(): void {
+    this.datosPorfolio.obtenerInformaticas().subscribe(data2 => {
+      this.informaticasList = data2;
     });
   }
 
-  addinformatica(){
+
+  addinformatica() {
     this.router.navigate(['/est-informaticos/addinformaticos'])
   }
 
-  editarinformatica(){
-    this.router.navigate(['/est-informaticos/editar-informaticos']);
+
+  borrarInformatica(id?: number) {
+    this.datosPorfolio.borrarInformaticas(id).subscribe(data => {
+      alert("La formación tecnica informática se eliminó con éxito");
+      this.datosPorfolio.obtenerInformaticas().subscribe(data => {
+        this.informaticasList = data;
+      });
+    });
   }
 }

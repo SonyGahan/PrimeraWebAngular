@@ -69,7 +69,7 @@ export class PorfolioService {
   }
 
   //metodo para editar una habilidad por ID//
-  public editarHabilidades(editarhabilidad:Habilidad): Observable<Habilidad>{
+  public editarHabilidades(id: number, editarhabilidad:Habilidad): Observable<Habilidad>{
     return this.http.put<Habilidad>(`${this.urlbase}/habilidad/editar/${editarhabilidad.id}`, editarhabilidad);
   }
 
@@ -96,7 +96,7 @@ export class PorfolioService {
   }
 
   //metodo para editar una instruccion informatica por ID//
-  public editarInformaticas(editarinformatica:Informatica): Observable<Informatica>{
+  public editarInformaticas(id: number, editarinformatica:Informatica): Observable<Informatica>{
     return this.http.put<Informatica>(`${this.urlbase}/informatica/editar/${editarinformatica.id}`, editarinformatica);
   }
 
@@ -126,7 +126,7 @@ export class PorfolioService {
   }
 
   //metodo para editar un estudio por ID//
-  public editarInstrucciones(editarestudio:Instruccion): Observable<Instruccion>{
+  public editarInstrucciones(id: number, editarestudio:Instruccion): Observable<Instruccion>{
     return this.http.put<Instruccion>(`${this.urlbase}/instruccion/editar/${editarestudio.id}`, editarestudio);
   }
 
@@ -143,10 +143,15 @@ export class PorfolioService {
   //obtener Datos personales//
   public obtenerDpersonales():Observable<Dpersonal[]>{
     return this.http.get<Dpersonal[]>(`${this.urlbase}/dpersonal`);
-  }  
+  } 
+  
+  //obtener Datos personales por ID//
+  public obtenerDpersonalesPorId(id?: number): Observable<Dpersonal>{
+    return this.http.get<Dpersonal>(`${this.urlbase}/dpersonal/${id}`);
+   }
 
   //Editar Datos Personales//
-  public editarDpersonales(editardatospersonal:Dpersonal): Observable<Dpersonal>{
+  public editarDpersonales(id: number, editardatospersonal:Dpersonal): Observable<Dpersonal>{
     return this.http.put<Dpersonal>(`${this.urlbase}/instruccion/editar/${editardatospersonal.id}`, editardatospersonal);
   }
 

@@ -1,37 +1,57 @@
-<div class="container" *ngIf="expLab">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group mb-3">
-                    <label class="form-label text-secondary">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" [(ngModel)]="expLab.nombre" name="nombre"
-                        required>
-                </div>
-                <div class="form-group mb-3">
-                    <label class="form-label text-secondary">Perfil</label>
-                    <input type="text" class="form-control" id="perfil" [(ngModel)]="expLab.perfil" name="perfil"
-                        required>
-                </div>
-                <div class="form-group mb-3">
-                    <label class="form-label text-secondary">Fecha Ingreso</label>
-                    <input type="text" class="form-control" id="finicio" [(ngModel)]="expLab.finicio" name="finicio"
-                        required>
-                </div>
-                <div class="form-group mb-3">
-                    <label class="form-label text-secondary">Fecha Egreso</label>
-                    <input type="text" class="form-control" id="ffinal" [(ngModel)]="expLab.ffinal" name="ffinal"
-                        required>
-                </div>
-                <div class="form-group mb-3">
-                    <label class="form-label text-secondary">Detalles</label>
-                    <input type="text" class="form-control" id="detalle" [(ngModel)]="expLab.detalle" name="detalle"
-                        required>
-                </div>
+<div class="container-xxl" id="fondo-form">
+    <div class="col-sm-12 espacios">
+        <div class="card mb-4 mx-auto" style="max-width: 80%;">
+            <div class="card-header bg-secondary">
+                <h4 class="m-2 text-center text-white">Editar Experiencia Laboral</h4>
+            </div>
 
-                <button class="btn bg-primary text-white btn-sm mx-2">Actualizar</button>
-                <button (click)="cancelar()" class="btn bg-danger text-white btn-sm">Cancelar</button>
+            <div class="row g-0">
+                <div class="col-md-3 imgexperiencia">
+                    <img src="assets/img/cards/card17.jpg" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-body">
+                        <div class="container" *ngIf="expLab">
+                            <div class="row">
+                                <div>
+                                    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                                        <div class="form-group mb-3">
+                                            <label class="form-label text-secondary">Nombre</label>
+                                            <input type="text" class="form-control" id="nombre"
+                                                [(ngModel)]="expLab.nombre" name="nombre" required>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label class="form-label text-secondary">Perfil</label>
+                                            <input type="text" class="form-control" id="perfil"
+                                                [(ngModel)]="expLab.perfil" name="perfil" required>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label class="form-label text-secondary">Fecha Ingreso</label>
+                                            <input type="text" class="form-control" id="finicio"
+                                                [(ngModel)]="expLab.finicio" name="finicio" required>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label class="form-label text-secondary">Fecha Egreso</label>
+                                            <input type="text" class="form-control" id="ffinal"
+                                                [(ngModel)]="expLab.ffinal" name="ffinal" required>
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <label class="form-label text-secondary">Detalles</label>
+                                            <input type="text" class="form-control" id="detalle"
+                                                [(ngModel)]="expLab.detalle" name="detalle" required>
+                                        </div>
 
-            </form>
+                                        <button class="btn bg-primary text-white btn-sm mx-2">Actualizar</button>
+                                        <button (click)="cancelar()"
+                                            class="btn bg-danger text-white btn-sm">Cancelar</button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

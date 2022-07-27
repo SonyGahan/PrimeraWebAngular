@@ -6,7 +6,7 @@
 
     <div class="col-2">
       <div class="d-grid gap-2 d-md-flex justify-content-md-end botonagregar">
-        <i class="bi bi-plus-square" iconPos="center" title="Agregar" (click)="addinformatica()"></i>
+        <i class="bi bi-plus-square" iconPos="center" title="Agregar" (click)="addinformatica()" *ngIf="isLogged"></i>
         <link rel="bi bi-plus-square" href="/est-informaticos/addinformaticos">
       </div>
     </div>
@@ -24,9 +24,9 @@
     <div class="row">
       <div class="card text-dark bg-light mb-3 mx-auto" style="max-width: 96%;">
         <div class="card-header">
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end botonicono">
-            <i (click)="editarinformatica()" class="bi bi-pencil-fill" iconPos="left" title="Editar"></i>
-            <i class="bi bi-trash3-fill" iconPos="left" title="Eliminar"></i>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end botonicono" *ngIf="isLogged">
+            <i routerLink="/est-informaticos/editar-informaticos/{{informaticas.id}}" class="bi bi-pencil-fill" iconPos="left" title="Editar"></i>
+            <i (click)="borrarInformatica(informaticas.id)" class="bi bi-trash3-fill" iconPos="left" title="Eliminar"></i>
           </div>
         </div>
         <div class="card-body">

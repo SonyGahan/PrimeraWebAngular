@@ -35,8 +35,8 @@
     <div class="container float-start editaricono">
         <img [src]="dpersonal.foto" class="border border-4 imagen-perfil" alt="...">
         <!--<i class="bi bi-camera" iconPos="left" title="Editar Foto Perfil"></i>-->
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end botonicono">
-          <i class="bi bi-pencil-square" iconPos="left" title="Editar"></i>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end botonicono" *ngIf="isLogged">
+          <i routerLink="/encabezado/editar-personal/{{dpersonal.id}}"class="bi bi-pencil-square" iconPos="left" title="Editar"></i>
       </div>
     </div>
 

@@ -11,13 +11,13 @@ import { TokenService } from 'src/app/servicios/token.service';
 })
 
 export class ExpLaboralComponent implements OnInit {
-  experienciaList: Experiencia[]=[];
+  experienciaList: Experiencia[] = [];
 
 
-  constructor(private datosPorfolio:PorfolioService, private router: Router, private tokenService: TokenService) { }
+  constructor(private datosPorfolio: PorfolioService, private router: Router, private tokenService: TokenService) { }
 
   isLogged = false;
-  
+
   ngOnInit(): void {
     this.cargarExperiencia();
     if (this.tokenService.getToken()) {
@@ -28,25 +28,22 @@ export class ExpLaboralComponent implements OnInit {
   }
 
   cargarExperiencia(): void {
-    this.datosPorfolio.obtenerExperiencias().subscribe( data =>{this.experienciaList=data;});
+    this.datosPorfolio.obtenerExperiencias().subscribe(data => { this.experienciaList = data; });
   }
 
 
-  addExperiencia(){
+  addExperiencia() {
     this.router.navigate(['/exp-laboral/addexperiencia'])
   }
 
 
-  borrarExperiencia(id?: number){
-    this.datosPorfolio.borrarExperiencias(id).subscribe(data =>{
+  borrarExperiencia(id?: number) {
+    this.datosPorfolio.borrarExperiencias(id).subscribe(data => {
       alert("La experiencia se eliminó con éxito");
-      this.datosPorfolio.obtenerExperiencias().subscribe( data =>{
-        this.experienciaList=data;
+      this.datosPorfolio.obtenerExperiencias().subscribe(data => {
+        this.experienciaList = data;
       });
     });
   }
-  
-  editarExperiencia(id?: number){
-    this.router.navigate(['/exp-laboral/editar-experiencia/:id'])
-  }
+
 }
