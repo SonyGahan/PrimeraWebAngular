@@ -16,71 +16,122 @@ export class PorfolioService {
   //Seccion Experiencia Laboral//
 
   //listado de Experiencia Laboral//
-  obtenerExperiencias():Observable<Experiencia[]>{
+  public obtenerExperiencias():Observable<Experiencia[]>{
     return this.http.get<Experiencia[]>(`${this.urlbase}/experiencia`);
   }
 
-  obtenerDatos():Observable<any>{
+  public obtenerDatos():Observable<any>{
     return this.http.get('/assets/data/data.json');
   }
 
+  //obtener Experiencias por ID//
+  public obtenerExperienciasPorId(id?: number): Observable<Experiencia>{
+    return this.http.get<Experiencia>(`${this.urlbase}/experiencia/${id}`);
+   }
+
+
   //metodo agregar una nueva experiencia//
-  addExperiencias(nuevaexperiencia:Experiencia): Observable<Experiencia>{
+  public addExperiencias(nuevaexperiencia:Experiencia): Observable<Experiencia>{
     return this.http.post<Experiencia>(`${this.urlbase}/experiencia/agregar`, nuevaexperiencia);
   }
+
+  //metodo para editar una experiencia por ID//
+  public editarExperiencias(id: number, editarexperiencia: Experiencia): Observable<any>{
+    return this.http.put<any>(`${this.urlbase}/experiencia/editar/${id}`, editarexperiencia);
+  }
+
+  
+
+  //metodo para eliminar una experiencia por ID//
+  public borrarExperiencias(id?: number): Observable<Experiencia>{
+    return this.http.delete<Experiencia>(`${this.urlbase}/experiencia/eliminar/${id}`);
+   }
+
+
+
 
   //Seccion Habilidades//
 
   //listado de Habilidades//
-  obtenerHabilidades():Observable<Habilidad[]>{
+  public obtenerHabilidades():Observable<Habilidad[]>{
     return this.http.get<Habilidad[]>(`${this.urlbase}/habilidad`);
   }
 
+  //obtener Habilidades por ID//
+  public obtenerHabilidadesPorId(id?: number): Observable<Habilidad>{
+    return this.http.get<Habilidad>(`${this.urlbase}/habilidad/${id}`);
+   }
+
+
   //metodo agregar una nueva habilidad//
-  addHabilidades(nuevahabilidad:Habilidad): Observable<Habilidad>{
+  public addHabilidades(nuevahabilidad:Habilidad): Observable<Habilidad>{
     return this.http.post<Habilidad>(`${this.urlbase}/habilidad/agregar`, nuevahabilidad);
   }
+
+  //metodo para editar una habilidad por ID//
+  public editarHabilidades(editarhabilidad:Habilidad): Observable<Habilidad>{
+    return this.http.put<Habilidad>(`${this.urlbase}/habilidad/editar/${editarhabilidad.id}`, editarhabilidad);
+  }
+
+  //metodo para eliminar una habilidad por ID//
+  public borrarHabilidades(id?: number): Observable<Habilidad>{
+    return this.http.delete<Habilidad>(`${this.urlbase}/habilidad/eliminar/${id}`);
+   }
   
   //Seccion Formación Técnica Informática//
 
   //listado de Formación Técnica Informática//
-  obtenerInformaticas():Observable<Informatica[]>{
+  public obtenerInformaticas():Observable<Informatica[]>{
     return this.http.get<Informatica[]>(`${this.urlbase}/informatica`);
   }
 
+  //obtener Formación Técnica Informática por ID//
+  public obtenerInformaticasPorId(id?: number): Observable<Informatica>{
+    return this.http.get<Informatica>(`${this.urlbase}/informatica/${id}`);
+   }
+
   //metodo agregar una nueva instruccion informatica//
-  addInformaticas(nuevainformatica: Informatica): Observable<Informatica>{
+  public addInformaticas(nuevainformatica: Informatica): Observable<Informatica>{
     return this.http.post<Informatica>(`${this.urlbase}/informatica/agregar`, nuevainformatica);
   }
 
+  //metodo para editar una instruccion informatica por ID//
+  public editarInformaticas(editarinformatica:Informatica): Observable<Informatica>{
+    return this.http.put<Informatica>(`${this.urlbase}/informatica/editar/${editarinformatica.id}`, editarinformatica);
+  }
+
+  //metodo para eliminar una instruccion informatica por ID//
+  public borrarInformaticas(id?: number): Observable<Informatica>{
+    return this.http.delete<Informatica>(`${this.urlbase}/informatica/eliminar/${id}`);
+   }
 
 
   
   //Seccion Instruccion y Formacion Profesional//
 
   //listado de Estudios//
-  obtenerInstrucciones():Observable<Instruccion[]>{
+  public obtenerInstrucciones():Observable<Instruccion[]>{
     return this.http.get<Instruccion[]>(`${this.urlbase}/instruccion`);
   }
 
   //obtener Estudios por ID//
-  obtenerInstruccionesPorId(id?: number): Observable<Instruccion>{
+  public obtenerInstruccionesPorId(id?: number): Observable<Instruccion>{
     return this.http.get<Instruccion>(`${this.urlbase}/instruccion/${id}`);
    }
 
 
   //metodo agregar un nuevo estudio//
-  addInstrucciones(nuevoestudio:Instruccion): Observable<Instruccion>{
+  public addInstrucciones(nuevoestudio:Instruccion): Observable<Instruccion>{
     return this.http.post<Instruccion>(`${this.urlbase}/instruccion/agregar`, nuevoestudio);
   }
 
   //metodo para editar un estudio por ID//
-  editarInstrucciones(editarestudio:Instruccion): Observable<Instruccion>{
+  public editarInstrucciones(editarestudio:Instruccion): Observable<Instruccion>{
     return this.http.put<Instruccion>(`${this.urlbase}/instruccion/editar/${editarestudio.id}`, editarestudio);
   }
 
   //metodo para eliminar un estudio por ID//
-  borrarInstrucciones(id?: number): Observable<Instruccion>{
+  public borrarInstrucciones(id?: number): Observable<Instruccion>{
     return this.http.delete<Instruccion>(`${this.urlbase}/instruccion/eliminar/${id}`);
    }
 
@@ -90,16 +141,14 @@ export class PorfolioService {
   // Encabezado metodos para Datos personales//
 
   //obtener Datos personales//
-  obtenerDpersonales():Observable<Dpersonal[]>{
+  public obtenerDpersonales():Observable<Dpersonal[]>{
     return this.http.get<Dpersonal[]>(`${this.urlbase}/dpersonal`);
   }  
 
   //Editar Datos Personales//
-  editarDpersonales(editardatospersonal:Dpersonal): Observable<Dpersonal>{
+  public editarDpersonales(editardatospersonal:Dpersonal): Observable<Dpersonal>{
     return this.http.put<Dpersonal>(`${this.urlbase}/instruccion/editar/${editardatospersonal.id}`, editardatospersonal);
   }
-
-  
 
 }
 

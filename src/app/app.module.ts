@@ -23,6 +23,10 @@ import { HabilidadesComponent } from './componentes/habilidades/habilidades.comp
 import { PorfolioService } from 'src/app/servicios/porfolio.service';
 import { EditarEstudiosComponent } from './componentes/formulario/editar-estudios/editar-estudios.component';
 import { interceptorProvider } from './servicios/interceptor-service';
+import { EditarExperienciaComponent } from './componentes/formulario/editar-experiencia/editar-experiencia.component';
+import { EditarHabilidadesComponent } from './componentes/formulario/editar-habilidades/editar-habilidades.component';
+import { EditarInformaticosComponent } from './componentes/formulario/editar-informaticos/editar-informaticos.component';
+import { EditarPersonalComponent } from './componentes/formulario/editar-personal/editar-personal.component';
 
 
 
@@ -44,7 +48,11 @@ import { interceptorProvider } from './servicios/interceptor-service';
     AddinformaticosComponent,
     AddhabilidadesComponent,
     HabilidadesComponent,
-    EditarEstudiosComponent
+    EditarEstudiosComponent,
+    EditarExperienciaComponent,
+    EditarHabilidadesComponent,
+    EditarInformaticosComponent,
+    EditarPersonalComponent
   ],
 
   imports: [

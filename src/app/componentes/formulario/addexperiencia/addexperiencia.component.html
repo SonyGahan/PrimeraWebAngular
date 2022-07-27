@@ -1,43 +1,49 @@
 <div class="container-xxl" id="fondo-form">
   <div class="col-sm-12 espacios">
-    <div class="card mb-4 mx-auto" style="max-width: 80%;"> 
+    <div class="card mb-4 mx-auto" style="max-width: 80%;">
       <div class="card-header bg-secondary">
-        <h4 class="m-2 text-center text-white">Agregar Experiencia Laboral</h4>
+        <h4 class="m-2 text-center text-white">Nueva Experiencia Laboral</h4>
       </div>
-      
+
       <div class="row g-0">
         <div class="col-md-3 imgexperiencia">
-                <img src="assets/img/cards/card17.jpg" class="img-fluid rounded-start" alt="...">
+          <img src="assets/img/cards/card17.jpg" class="img-fluid rounded-start" alt="...">
         </div>
         <div class="col-md-9">
-              <div class="card-body">
-                  <form form (ngSubmit)="onSubmit()" class="m-5">
-                    <div class="mb-3">
-                      <label class="form-label text-secondary">Nombre</label>
-                      <input type="text" class="form-control" id="nombre" [(ngModel)]="nuevaexperiencia.nombre" name="nombre">
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label text-secondary">Perfil</label>
-                      <input type="text" class="form-control" id="perfil" [(ngModel)]="nuevaexperiencia.perfil" name="perfil">
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label text-secondary">Fecha Ingreso</label>
-                      <input type="text" class="form-control" id="finicio" [(ngModel)]="nuevaexperiencia.finicio" name="finicio">
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label text-secondary">Fecha Egreso</label>
-                      <input type="text" class="form-control" id="ffinal" [(ngModel)]="nuevaexperiencia.ffinal" name="ffinal">
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label text-secondary">Detalles</label>
-                      <input type="text" class="form-control" id="detalle" [(ngModel)]="nuevaexperiencia.detalle" name="detalle">
-                    </div>
-                    <button (click)="Agregar(nuevaexperiencia)" class="btn bg-primary text-white btn-sm mx-2">Agregar</button>
-                    <button (click)="cancelar()" class="btn bg-primary text-white btn-sm">Cancelar</button>
-                  </form>
+          <div class="card-body">
+            <form (ngSubmit)="onSubmit()" novalidate #f="ngForm" class="m-5">
+              <div class="form-group mb-3">
+                <label class="form-label text-secondary">Nombre</label>
+                <input type="text" class="form-control" id="nombre" [(ngModel)]="nuevaexperiencia.nombre" name="nombre"
+                  required>
               </div>
+              <div class="form-group mb-3">
+                <label class="form-label text-secondary">Perfil</label>
+                <input type="text" class="form-control" id="perfil" [(ngModel)]="nuevaexperiencia.perfil" name="perfil"
+                  required>
+              </div>
+              <div class="form-group mb-3">
+                <label class="form-label text-secondary">Fecha Ingreso</label>
+                <input type="text" class="form-control" id="finicio" [(ngModel)]="nuevaexperiencia.finicio"
+                  name="finicio" required>
+              </div>
+              <div class="form-group mb-3">
+                <label class="form-label text-secondary">Fecha Egreso</label>
+                <input type="text" class="form-control" id="ffinal" [(ngModel)]="nuevaexperiencia.ffinal" name="ffinal"
+                  required>
+              </div>
+              <div class="form-group mb-3">
+                <label class="form-label text-secondary">Detalles</label>
+                <input type="text" class="form-control" id="detalle" [(ngModel)]="nuevaexperiencia.detalle"
+                  name="detalle" required>
+              </div>
+              <button (click)="agregarExperiencia(nuevaexperiencia)"
+                class="btn bg-primary text-white btn-sm mx-2">Agregar</button>
+              <button (click)="cancelar()" class="btn bg-danger text-white btn-sm">Cancelar</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-  </div>	
+  </div>
 </div>
