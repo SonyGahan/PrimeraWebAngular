@@ -1,1 +1,1 @@
-export const urlback: string = "https://porfoliosoniapereira.herokuapp.com/";
+export const urlback: string = "https://porfoliosoniapereira.herokuapp.com";
