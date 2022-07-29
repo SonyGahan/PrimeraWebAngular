@@ -38,12 +38,12 @@ export class ExpLaboralComponent implements OnInit {
 
 
   borrarExperiencia(id?: number) {
-    this.datosPorfolio.borrarExperiencias(id).subscribe(data => {
-      alert("La experiencia se eliminó con éxito");
-      this.datosPorfolio.obtenerExperiencias().subscribe(data => {
-        this.experienciaList = data;
+      this.datosPorfolio.borrarExperiencias(id).subscribe(data => {
+        alert("La experiencia se eliminó con éxito");
+        this.datosPorfolio.obtenerExperiencias().subscribe(data => {
+          this.experienciaList = data;
+        });
       });
-    });
   }
 
 }

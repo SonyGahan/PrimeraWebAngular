@@ -9,7 +9,7 @@ import { NuevoUsuario } from 'src/assets/data/nuevo-usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'http://localhost:8080/auth/';
+  authURL = 'https://porfoliosoniapereira.herokuapp.com/auth/';
   
   constructor(private httpClient: HttpClient) { }
 
